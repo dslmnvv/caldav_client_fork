@@ -26,7 +26,7 @@ class MultiStatus {
         var syncToken = elements
             .firstWhere((element) => element.name.local == 'sync-token');
 
-        return MultiStatus(response: response, syncToken: syncToken.text);
+        return MultiStatus(response: response, syncToken: syncToken.innerText);
       } catch (e) {
         return MultiStatus(response: response);
       }

@@ -26,7 +26,7 @@ class Propstat {
             .map((element) => Element.fromXml(element))
             .toList();
 
-        var value = children.isEmpty ? element.text : children;
+        var value = children.isEmpty ? element.innerText : children;
 
         prop[element.name.local] = value;
       });
@@ -34,7 +34,7 @@ class Propstat {
       // get status
       var status = elements
           .firstWhere((element) => element.name.local == 'status')
-          .text
+          .innerText
           .split(' ')[1];
 
       return Propstat(prop: prop, status: int.parse(status));

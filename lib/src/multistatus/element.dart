@@ -18,6 +18,6 @@ class Element {
     });
 
     return Element(
-        name: element.name.local, text: element.text, atributes: attributes);
+        name: element.name.local, text: element.innerText, atributes: attributes);
   }
 }

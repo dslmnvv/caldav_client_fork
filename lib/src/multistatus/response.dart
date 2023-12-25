@@ -12,7 +12,7 @@ class Response {
       var elements = element.children.whereType<XmlElement>();
 
       var href =
-          elements.firstWhere((element) => element.name.local == 'href').text;
+          elements.firstWhere((element) => element.name.local == 'href').innerText;
 
       var propstatXml =
           elements.firstWhere((element) => element.name.local == 'propstat');
